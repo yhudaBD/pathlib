@@ -1,10 +1,11 @@
 from pathlib import Path
 
-current_dir = Path.cwd()
-print(current_dir)
+path = Path('documents/reports/annual_report.pdf')
 
-file_path = current_dir / 'files' / 'data.txt'
-print(file_path.parent)
+print(path.name)
+print(path.stem)
+print(path.suffix)
+print(path.parent)
 
-home_dir = Path.home()
-print(home_dir)
+for p in path.parents:
+    print(p)
