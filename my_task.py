@@ -11,6 +11,5 @@ for item in path.iterdir():
     elif item.is_file():
         print("File:", item.name)
         files_count += 1
-
 print("Folders count:", folders_count)
 print("Files count:", files_count)
