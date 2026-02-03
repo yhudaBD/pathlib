@@ -1,10 +1,10 @@
 from pathlib import Path
 
-current_dir = Path.cwd()
-print(current_dir)
+file_path = Path('notes.txt')
 
-file_path = current_dir / 'files' / 'data.txt'
-print(file_path.parent)
+if file_path.exists():
+    print('File exists')
+else:
+    file_path.write_text('This is a new file created by pathlib')
 
-home_dir = Path.home()
-print(home_dir)
+print(file_path.read_text())
